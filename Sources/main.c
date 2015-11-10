@@ -29,8 +29,9 @@
 
 #include "mcg.h"
 #include "sdram.h"
-#include "uartdriver.h"
-#include "lcdcdriver.h"
+#include "uart.h"
+#include "lcdc.h"
+#include "io.h"
 #include "lcdcConsole.h"
 
 #define CHAR_EOF 4
@@ -40,32 +41,19 @@ void consoleDemo();
 int main(void) {
   /* After calling mcgInit, MCGOUTCLK is set to 120 MHz and the Bus
    * (peripheral) clock is set to 60 MHz.*/
-
   mcgInit();
-
   sdramInit();
-
-  uart_driver_init();
-
-  lcdc_driver_init();
-
+  uart_init(0);
+  lcdc_init(0);
   consoleDemo();
-
   return 0;
 }
 
-
 void consoleDemo() {
   while(1) {
-	char ch = uart_driver_read();
-
-	// Echo the input character back to the UART
-	uart_driver_write(ch);
-
-	// Output the character on the TWR_LCD_RGB
-	lcdc_driver_write(ch);
-
- 	// Exit if character typed was a Control-D (EOF)
+	char ch = uart_read(0);
+	uart_write(ch, 0);
+	lcdc_write(ch, 0);
 	if(ch == CHAR_EOF) {
 	  return;
 	}
