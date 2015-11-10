@@ -54,6 +54,7 @@ int main(void) {
   return 0;
 }
 
+
 void consoleDemo() {
   while(1) {
 	char ch = uart_driver_read();
