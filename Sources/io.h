@@ -2,7 +2,7 @@
 #define IO_H value
 #define MAX_DEVICES 100
 #define MAX_FILE_DESCRIPTORS 1000
-#define PREDEFINED_DEVICE_MAP 2
+#define PREDEFINED_DEVICE_MAP 8
 
 typedef struct _fdtable_t {
     int major_num; 
@@ -14,10 +14,28 @@ typedef struct _stream_t {
     int majorno; 
 } stream_t;
 
-typedef enum {LCDC, UART} major_device; 
 typedef enum {LCDC1} lcdc_minor_device; 
 typedef enum {UART1} uart_minor_device; 
-
+typedef enum { 
+    LCDC,
+    UART,
+    LED,
+    PUSHBUTTON,
+    POTENTIOMETER,
+    CAPACITIVEPAD,
+    THERMISTOR,
+    _FILE 
+} major_device; 
+typedef enum { 
+    CAPACITIVEPAD1,
+    CAPACITIVEPAD2,
+    CAPACITIVEPAD3,
+    CAPACITIVEPAD4 
+} capacitivepad_minor_device; 
+typedef enum { LED_ORANGE, LED_YELLOW, LED_GREEN, LED_BLUE} led_minor_device;  
+typedef enum { PUSHBUTTON_SW1, PUSHBUTTON_SW2 } pushbutton_minor_device;
+typedef enum { POTENTIOMETER1} potentiometer_minor_device;
+typedef enum { THERMISTOR1} thermistor_minor_device; 
 
 typedef struct _filepath_to_device_t {
     const char * filepath; 
