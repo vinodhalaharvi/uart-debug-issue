@@ -4,6 +4,7 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CHAR_EOF	main.1.c	36;"	d	file:
 CHAR_EOF	main.c	36;"	d	file:
 DDR_CR00_DDRCLS_DDR	sdram.h	36;"	d
 DDR_CR00_DDRCLS_DDR2	sdram.h	38;"	d
@@ -104,6 +105,8 @@ _PROFONT_H	profont.h	13;"	d
 _SDRAM_H	sdram.h	13;"	d
 _UARTDRIVER_H	uartdriver.h	13;"	d
 console	lcdcConsole.h	/^struct console {$/;"	s
+console	lcdcdriver.c	/^static struct console console; $/;"	v	typeref:struct:console	file:
+consoleDemo	main.1.c	/^void consoleDemo(struct console *console) {$/;"	f
 consoleDemo	main.c	/^void consoleDemo(struct console *console) {$/;"	f
 framebuffer	lcdcConsole.h	/^  uint32_t *framebuffer;	\/\/ Starting address of frame buffer in memory$/;"	m	struct:console
 height	lcdcConsole.h	/^  uint16_t width, height;	\/\/ Screen width & height (in pixels)$/;"	m	struct:console
@@ -114,6 +117,9 @@ lcdcConsoleScroll	lcdcConsole.c	/^void lcdcConsoleScroll(struct console *console
 lcdcInit	lcdcdriver.c	/^void lcdcInit(void) {$/;"	f
 lcdcInitPins	lcdcdriver.c	/^void lcdcInitPins() {$/;"	f
 lcdcInitScreen	lcdcdriver.c	/^void lcdcInitScreen() {$/;"	f
+lcdc_driver_init	lcdcdriver.c	/^void lcdc_driver_init(void) {$/;"	f
+lcdc_driver_write	lcdcdriver.c	/^int lcdc_driver_write(int ch){ $/;"	f
+main	main.1.c	/^int main(void) {$/;"	f
 main	main.c	/^int main(void) {$/;"	f
 mcgInit	mcg.c	/^void mcgInit(void) {$/;"	f
 profont	profont.c	/^uint8_t profont[PROFONT_CHARS_IN_FONT][PROFONT_FONT_HEIGHT][PROFONT_FONT_WIDTH] = {$/;"	v
@@ -123,6 +129,11 @@ uartGetcharPresent	uartdriver.c	/^int uartGetcharPresent(UART_MemMapPtr uartChan
 uartInit	uartdriver.c	/^void uartInit(UART_MemMapPtr uartChannel, int clockInKHz, int baud) {$/;"	f
 uartPutchar	uartdriver.c	/^void uartPutchar(UART_MemMapPtr uartChannel, char ch) {$/;"	f
 uartPuts	uartdriver.c	/^void uartPuts(UART_MemMapPtr uartChannel, char *p) {$/;"	f
+uart_driver_init	uartdriver.c	/^void uart_driver_init(void){$/;"	f
+uart_driver_input_present	uartdriver.c	/^int uart_driver_input_present(){ $/;"	f
+uart_driver_read	uartdriver.c	/^int uart_driver_read(){$/;"	f
+uart_driver_write	uartdriver.c	/^int uart_driver_write(int ch){$/;"	f
+uart_driver_writestring	uartdriver.c	/^void uart_driver_writestring(char *string){ $/;"	f
 width	lcdcConsole.h	/^  uint16_t width, height;	\/\/ Screen width & height (in pixels)$/;"	m	struct:console
 x	lcdcConsole.h	/^  uint16_t x, y;			\/\/ Current console output position x & y (in pixels)$/;"	m	struct:console
 y	lcdcConsole.h	/^  uint16_t x, y;			\/\/ Current console output position x & y (in pixels)$/;"	m	struct:console

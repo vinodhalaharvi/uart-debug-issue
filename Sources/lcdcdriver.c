@@ -15,6 +15,9 @@
 #include <string.h>
 #include "derivative.h"
 #include "lcdcdriver.h"
+#include "lcdcConsole.h"
+
+static struct console console; 
 
 void lcdcInit(void) {
   /* Errata ID 5234 in Mask Set Errata for Mask 0N96B, Rev. 05 OCT 2012
@@ -171,4 +174,17 @@ void lcdcInitScreen() {
 
   // Start the LCDC
   SIM_MCR |= SIM_MCR_LCDSTART_MASK;
+}
+
+
+void lcdc_driver_init(void) {
+    /* After calling mcgInit, MCGOUTCLK is set to 120 MHz and the Bus
+     * (peripheral) clock is set to 60 MHz.*/
+    lcdcInit();
+    lcdcConsoleInit(&console);
+}
+
+int lcdc_driver_write(int ch){ 
+    lcdcConsolePutc(&console, ch);
+    return 0;
 }

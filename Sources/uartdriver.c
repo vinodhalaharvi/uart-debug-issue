@@ -220,3 +220,31 @@ void uartPuts(UART_MemMapPtr uartChannel, char *p) {
 		uartPutchar(uartChannel, *p++);
 	}
 }
+
+
+void uart_driver_init(void){
+    const int peripheralClock = 60000000;
+    const int KHzInHz = 1000;
+    const int baud = 115200;
+    uartInit(UART2_BASE_PTR, peripheralClock/KHzInHz, baud);  
+}
+
+int uart_driver_write(int ch){
+    uartPutchar(UART2_BASE_PTR, ch);
+    return ch;
+}
+
+int uart_driver_read(){
+    int ch; 
+    ch = uartGetchar(UART2_BASE_PTR);
+    return ch; 
+}
+
+void uart_driver_writestring(char *string){ 
+    uartPuts(UART2_BASE_PTR, string);
+}
+
+
+int uart_driver_input_present(){ 
+    return uartGetcharPresent(UART2_BASE_PTR); 
+}

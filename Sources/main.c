@@ -41,36 +41,28 @@ int main(void) {
   /* After calling mcgInit, MCGOUTCLK is set to 120 MHz and the Bus
    * (peripheral) clock is set to 60 MHz.*/
 
-  const int peripheralClock = 60000000;
-  const int KHzInHz = 1000;
-
-  const int baud = 115200;
-  struct console console;
-
   mcgInit();
 
   sdramInit();
 
-  uartInit(UART2_BASE_PTR, peripheralClock/KHzInHz, baud);
+  uart_driver_init();
 
-  lcdcInit();
+  lcdc_driver_init();
 
-  lcdcConsoleInit(&console);
-
-  consoleDemo(&console);
+  consoleDemo();
 
   return 0;
 }
 
-void consoleDemo(struct console *console) {
+void consoleDemo() {
   while(1) {
 	char ch = uartGetchar(UART2_BASE_PTR);
 
 	// Echo the input character back to the UART
-	uartPutchar(UART2_BASE_PTR, ch);
+	uart_driver_write(ch);
 
 	// Output the character on the TWR_LCD_RGB
-	lcdcConsolePutc(console, ch);
+	lcdc_driver_write(ch);
 
  	// Exit if character typed was a Control-D (EOF)
 	if(ch == CHAR_EOF) {
