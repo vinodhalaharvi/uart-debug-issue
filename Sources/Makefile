@@ -35,4 +35,4 @@ run: io
 
 clean:
 	rm -f *.o
-	rm io
+	rm -f io

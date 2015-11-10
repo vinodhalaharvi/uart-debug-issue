@@ -5,8 +5,8 @@
 -g3
 -gdwarf-2
 -gstrict-dwarf
--I"C:/Users/vhalaharvi/workspace/second/Project_Headers"
--I"C:/Users/vhalaharvi/workspace/second/Project_Settings/Startup_Code"
+-I"//vmware-host/Shared Folders/Documents/workspace/uart-debug-issue/Project_Headers"
+-I"//vmware-host/Shared Folders/Documents/workspace/uart-debug-issue/Project_Settings/Startup_Code"
 -I"C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include"
 -I"C:/Freescale/CW MCU v10.6/MCU/ARM_GCC_Support/ewl/EWL_Runtime/include"
 -O0

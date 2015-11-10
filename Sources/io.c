@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <string.h>
 #include "io.h"
+#include "led.h"
+#include "pushbutton.h"
 #include "uart.h"
 #include "lcdc.h"
 #include "stringutils.h"
