@@ -31,7 +31,9 @@
 #include "sdram.h"
 #include "io.h"
 #include "lcdcConsole.h"
+#include "svc.h"
 #include "common.h"
+
 #define CHAR_EOF 4
 void consoleDemo();
 extern unsigned mystdout; 
