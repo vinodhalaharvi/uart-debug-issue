@@ -29,7 +29,7 @@
 
 #include "mcg.h"
 #include "sdram.h"
-#include "uart.h"
+#include "uartdriver.h"
 #include "lcdc.h"
 #include "lcdcConsole.h"
 

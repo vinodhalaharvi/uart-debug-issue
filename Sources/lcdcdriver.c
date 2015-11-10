@@ -14,7 +14,7 @@
 
 #include <string.h>
 #include "derivative.h"
-#include "lcdc.h"
+#include "lcdcdriver.h"
 
 void lcdcInit(void) {
   /* Errata ID 5234 in Mask Set Errata for Mask 0N96B, Rev. 05 OCT 2012

@@ -11,7 +11,7 @@
 
 #include <stdint.h>
 #include "derivative.h"
-#include "uart.h"
+#include "uartdriver.h"
 
 /* Table 5-2 on page 221 indicates that the clock used by UART0 and
  * UART1 is the System clock and that the clock used by UART2-5 is

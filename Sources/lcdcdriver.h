@@ -9,8 +9,8 @@
  * Written by James L. Frankel (frankel@seas.harvard.edu)
  */
 
-#ifndef _LCDC_H
-#define _LCDC_H
+#ifndef _LCDCDRIVER_H
+#define _LCDCDRIVER_H
 
 #include "sdram.h"
 

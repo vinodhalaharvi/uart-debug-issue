@@ -9,8 +9,8 @@
  * Written by James L. Frankel (frankel@seas.harvard.edu)
  */
 
-#ifndef _UART_H
-#define _UART_H
+#ifndef _UARTDRIVER_H
+#define _UARTDRIVER_H
 
 #include "derivative.h"
 

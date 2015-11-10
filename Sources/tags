@@ -1,0 +1,128 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CHAR_EOF	main.c	36;"	d	file:
+DDR_CR00_DDRCLS_DDR	sdram.h	36;"	d
+DDR_CR00_DDRCLS_DDR2	sdram.h	38;"	d
+DDR_CR00_DDRCLS_LPDDR	sdram.h	37;"	d
+DDR_CR09_BSTLEN_2_WORDS	sdram.h	40;"	d
+DDR_CR09_BSTLEN_4_WORDS	sdram.h	41;"	d
+DDR_CR09_BSTLEN_8_WORDS	sdram.h	42;"	d
+DDR_CR30_INTSTAT_ANY_MASK	sdram.h	61;"	d
+DDR_CR30_INTSTAT_ANY_SHIFT	sdram.h	60;"	d
+DDR_CR30_INTSTAT_CAS_3_ERROR_MASK	sdram.h	53;"	d
+DDR_CR30_INTSTAT_CAS_3_ERROR_SHIFT	sdram.h	52;"	d
+DDR_CR30_INTSTAT_DDR2_AND_MOBILE_EN_MASK	sdram.h	51;"	d
+DDR_CR30_INTSTAT_DDR2_AND_MOBILE_EN_SHIFT	sdram.h	50;"	d
+DDR_CR30_INTSTAT_DFI_INT_COMPLETE_CHANGE_MASK	sdram.h	57;"	d
+DDR_CR30_INTSTAT_DFI_INT_COMPLETE_CHANGE_SHIFT	sdram.h	56;"	d
+DDR_CR30_INTSTAT_DLL_RESYNC_FINISH_MASK	sdram.h	59;"	d
+DDR_CR30_INTSTAT_DLL_RESYNC_FINISH_SHIFT	sdram.h	58;"	d
+DDR_CR30_INTSTAT_DRAM_INIT_COMPLETE_MASK	sdram.h	49;"	d
+DDR_CR30_INTSTAT_DRAM_INIT_COMPLETE_SHIFT	sdram.h	48;"	d
+DDR_CR30_INTSTAT_MULTIPLE_OUTSIDE_MASK	sdram.h	47;"	d
+DDR_CR30_INTSTAT_MULTIPLE_OUTSIDE_SHIFT	sdram.h	46;"	d
+DDR_CR30_INTSTAT_SINGLE_OUTSIDE_MASK	sdram.h	45;"	d
+DDR_CR30_INTSTAT_SINGLE_OUTSIDE_SHIFT	sdram.h	44;"	d
+DDR_CR30_INTSTAT_WRITE_FINISH_MASK	sdram.h	55;"	d
+DDR_CR30_INTSTAT_WRITE_FINISH_SHIFT	sdram.h	54;"	d
+DDR_PAD_CTRL_PAD_ODT_CS0_150_OHMS	sdram.h	28;"	d
+DDR_PAD_CTRL_PAD_ODT_CS0_50_OHMS	sdram.h	29;"	d
+DDR_PAD_CTRL_PAD_ODT_CS0_75_OHMS	sdram.h	27;"	d
+DDR_PAD_CTRL_PAD_ODT_CS0_ODT_DISABLED	sdram.h	26;"	d
+DDR_PAD_CTRL_SPARE_DLY_CTRL_10_BUFFERS	sdram.h	34;"	d
+DDR_PAD_CTRL_SPARE_DLY_CTRL_4_BUFFERS	sdram.h	32;"	d
+DDR_PAD_CTRL_SPARE_DLY_CTRL_7_BUFFERS	sdram.h	33;"	d
+DDR_PAD_CTRL_SPARE_DLY_CTRL_NO_BUFFER	sdram.h	31;"	d
+LCDCCONSOLE_TAB_STOP_SPACING	lcdcConsole.h	19;"	d
+LCDC_ALT2	lcdcdriver.h	61;"	d
+LCDC_ALT5	lcdcdriver.h	62;"	d
+LCDC_ALT7	lcdcdriver.h	63;"	d
+LCDC_BLUE_MASK	lcdcdriver.h	33;"	d
+LCDC_BLUE_SHIFT	lcdcdriver.h	36;"	d
+LCDC_BYTES_PER_PIXEL	lcdcdriver.h	28;"	d
+LCDC_FRAME_BUFFER_SIZE	lcdcdriver.h	55;"	d
+LCDC_FRAME_START_ADDRESS	lcdcdriver.h	54;"	d
+LCDC_GREEN_MASK	lcdcdriver.h	32;"	d
+LCDC_GREEN_SHIFT	lcdcdriver.h	35;"	d
+LCDC_GW_BUFFER_SIZE	lcdcdriver.h	58;"	d
+LCDC_GW_START_ADDRESS	lcdcdriver.h	57;"	d
+LCDC_GW_XSIZE	lcdcdriver.h	24;"	d
+LCDC_GW_YSIZE	lcdcdriver.h	25;"	d
+LCDC_PIXEL_BLUE	lcdcdriver.h	42;"	d
+LCDC_PIXEL_GREEN	lcdcdriver.h	40;"	d
+LCDC_PIXEL_RED	lcdcdriver.h	38;"	d
+LCDC_RED_MASK	lcdcdriver.h	31;"	d
+LCDC_RED_SHIFT	lcdcdriver.h	34;"	d
+LCDC_SCREEN_BACKGROUND_COLOR	lcdcdriver.h	52;"	d
+LCDC_SCREEN_FOREGROUND_COLOR	lcdcdriver.h	50;"	d
+LCDC_SCREEN_XSIZE	lcdcdriver.h	20;"	d
+LCDC_SCREEN_YSIZE	lcdcdriver.h	21;"	d
+MCM_CR_DDRSIZE_128_MBYTES	sdram.h	22;"	d
+MCM_CR_DDRSIZE_256_MBYTES	sdram.h	23;"	d
+MCM_CR_DDRSIZE_512_MBYTES	sdram.h	24;"	d
+MCM_CR_DDRSIZE_ADDRESS_TRANSLATION_DISABLED	sdram.h	21;"	d
+PROFONT_CHARS_IN_FONT	profont.h	15;"	d
+PROFONT_FONT_HEIGHT	profont.h	16;"	d
+PROFONT_FONT_WIDTH	profont.h	17;"	d
+REVE	lcdcdriver.h	17;"	d
+SDRAM_END	sdram.h	70;"	d
+SDRAM_SIZE	sdram.h	64;"	d
+SDRAM_START	sdram.h	67;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_1	mcg.h	18;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_10	mcg.h	27;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_11	mcg.h	28;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_12	mcg.h	29;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_13	mcg.h	30;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_14	mcg.h	31;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_15	mcg.h	32;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_16	mcg.h	33;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_2	mcg.h	19;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_3	mcg.h	20;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_4	mcg.h	21;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_5	mcg.h	22;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_6	mcg.h	23;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_7	mcg.h	24;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_8	mcg.h	25;"	d
+SIM_CLKDIV1_OUTDIV_DIVIDE_BY_9	mcg.h	26;"	d
+SIM_MCR_DDRCFG_DDR1	sdram.h	18;"	d
+SIM_MCR_DDRCFG_DDR2_FULL_STRENGTH	sdram.h	19;"	d
+SIM_MCR_DDRCFG_DDR2_HALF_STRENGTH	sdram.h	17;"	d
+SIM_MCR_DDRCFG_LPDDR_FULL_STRENGTH	sdram.h	16;"	d
+SIM_MCR_DDRCFG_LPDDR_HALF_STRENGTH	sdram.h	15;"	d
+UART2_ERROR_INTERRUPT_PRIORITY	uartdriver.h	25;"	d
+UART2_ERROR_IRQ_NUMBER	uartdriver.h	23;"	d
+UART2_STATUS_INTERRUPT_PRIORITY	uartdriver.h	20;"	d
+UART2_STATUS_IRQ_NUMBER	uartdriver.h	18;"	d
+_LCDCCONSOLE_H	lcdcConsole.h	13;"	d
+_LCDCDRIVER_H	lcdcdriver.h	13;"	d
+_MCG_H	mcg.h	13;"	d
+_PROFONT_H	profont.h	13;"	d
+_SDRAM_H	sdram.h	13;"	d
+_UARTDRIVER_H	uartdriver.h	13;"	d
+console	lcdcConsole.h	/^struct console {$/;"	s
+consoleDemo	main.c	/^void consoleDemo(struct console *console) {$/;"	f
+framebuffer	lcdcConsole.h	/^  uint32_t *framebuffer;	\/\/ Starting address of frame buffer in memory$/;"	m	struct:console
+height	lcdcConsole.h	/^  uint16_t width, height;	\/\/ Screen width & height (in pixels)$/;"	m	struct:console
+lcdcConsoleClear	lcdcConsole.c	/^void lcdcConsoleClear(struct console *console) {$/;"	f
+lcdcConsoleInit	lcdcConsole.c	/^void lcdcConsoleInit(struct console *console) {$/;"	f
+lcdcConsolePutc	lcdcConsole.c	/^void lcdcConsolePutc(struct console *console, int ch) {$/;"	f
+lcdcConsoleScroll	lcdcConsole.c	/^void lcdcConsoleScroll(struct console *console) {$/;"	f
+lcdcInit	lcdcdriver.c	/^void lcdcInit(void) {$/;"	f
+lcdcInitPins	lcdcdriver.c	/^void lcdcInitPins() {$/;"	f
+lcdcInitScreen	lcdcdriver.c	/^void lcdcInitScreen() {$/;"	f
+main	main.c	/^int main(void) {$/;"	f
+mcgInit	mcg.c	/^void mcgInit(void) {$/;"	f
+profont	profont.c	/^uint8_t profont[PROFONT_CHARS_IN_FONT][PROFONT_FONT_HEIGHT][PROFONT_FONT_WIDTH] = {$/;"	v
+sdramInit	sdram.c	/^void sdramInit(void) {$/;"	f
+uartGetchar	uartdriver.c	/^char uartGetchar(UART_MemMapPtr uartChannel) {$/;"	f
+uartGetcharPresent	uartdriver.c	/^int uartGetcharPresent(UART_MemMapPtr uartChannel) {$/;"	f
+uartInit	uartdriver.c	/^void uartInit(UART_MemMapPtr uartChannel, int clockInKHz, int baud) {$/;"	f
+uartPutchar	uartdriver.c	/^void uartPutchar(UART_MemMapPtr uartChannel, char ch) {$/;"	f
+uartPuts	uartdriver.c	/^void uartPuts(UART_MemMapPtr uartChannel, char *p) {$/;"	f
+width	lcdcConsole.h	/^  uint16_t width, height;	\/\/ Screen width & height (in pixels)$/;"	m	struct:console
+x	lcdcConsole.h	/^  uint16_t x, y;			\/\/ Current console output position x & y (in pixels)$/;"	m	struct:console
+y	lcdcConsole.h	/^  uint16_t x, y;			\/\/ Current console output position x & y (in pixels)$/;"	m	struct:console
