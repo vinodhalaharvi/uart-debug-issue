@@ -60,6 +60,31 @@ void SVC_Handler() __attribute__ ((weak, alias("Default_Handler")));
 void DebugMonitor_Handler() __attribute__ ((weak, alias("Default_Handler")));
 void PendSV_Handler() __attribute__ ((weak, alias("Default_Handler")));
 void SysTick_Handler() __attribute__ ((weak, alias("Default_Handler")));
+extern void svcHandler(void);
+
+/*#ifdef __GNUC__
+void __attribute__((naked)) svcHandler(void) {
+	__asm("\n\
+            tst		lr, #4\n\
+			ite		eq\n\
+			mrseq	r0, msp\n\
+			mrsne	r0, psp\n\
+			push	{lr}\n\
+			bl		svcHandlerInC\n\
+			pop		{pc}\n\
+			");
+}
+#else
+__asm void svcHandler(void) {
+	tst		lr, #4
+	mrseq	r0, msp
+	mrsne	r0, psp
+	push	lr
+	bl		svcHandlerInC
+	pop		pc
+}
+#endif
+*/
 
 
 /* The Interrupt Vector Table */
@@ -76,7 +101,7 @@ void (* const InterruptVector[])() __attribute__ ((section(".vectortable"))) = {
     0, 
     0, 
     0, 
-    SVC_Handler, 
+    svcHandler, 
     DebugMonitor_Handler, 
     0,
     PendSV_Handler, 

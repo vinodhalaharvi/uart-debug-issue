@@ -28,11 +28,11 @@ profont: profont.o
 
 svc: svc.o
 
-io: io.o uart.o lcdc.o stringutils.o common.o delay.o uartdriver.o lcdcdriver.o mymalloc.o lcdcConsole.o profont.o svc.o led.o leddriver.o pushbutton.o pushbuttondriver.o capacitivepads.o capacitivepadsdriver.o thermistor.o thermistordriver.o potentiometer.o potentiometerdriver.o 
+main: io.o uart.o lcdc.o stringutils.o common.o delay.o uartdriver.o lcdcdriver.o mymalloc.o lcdcConsole.o profont.o svc.o led.o leddriver.o pushbutton.o pushbuttondriver.o capacitivepads.o capacitivepadsdriver.o thermistor.o thermistordriver.o potentiometer.o potentiometerdriver.o 
 
-run: io
-	./io
+run: main
+	./main
 
 clean:
 	rm -f *.o
-	rm io
+	rm -f io
