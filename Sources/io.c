@@ -68,11 +68,11 @@ void init_fdtable(){
 static struct device {
     int (*init)(void * minor_num); 
     int (*release)(void * minor_num); 
-    int (*read)(void * minor_num); 
     int (*write)(int ch, void *minor_num); 
+    int (*read)(void * minor_num); 
 } devices[MAX_DEVICES] = {
-    {lcdc_init, NULL, NULL, lcdc_write}, 
-    {uart_init, NULL, uart_read, uart_write}, 
+    {lcdc_init, NULL, lcdc_write, NULL}, 
+    {uart_init, NULL, uart_write, uart_read}, 
 }; 
 
 //static map
@@ -154,6 +154,7 @@ int myopen(const char * filepath, unsigned mode){
     if (isdevice(major_num)){ 
         fd = get_fd(major_num, minor_num); 
         myassert(fd != -1, "", "fd != -1"); 
+        devices[major_num].init((void *) (uintptr_t) minor_num); 
         return fd; 
     } /*else { 
         if (!isfileexists(filepath)){ 
@@ -183,7 +184,9 @@ int myclose(int fd){
     myassert(fd <= MAX_FILE_DESCRIPTORS, "", "fd <= MAX_FILE_DESCRIPTORS"); 
     major_num = fdtable[fd].major_num; 
     minor_num = fdtable[fd].minor_num; 
-    devices[major_num].release((void *) (uintptr_t) minor_num); 
+    if (devices[major_num].release){ 
+        devices[major_num].release((void *) (uintptr_t) minor_num); 
+    }
     return close_fd(fd); 
 }
 

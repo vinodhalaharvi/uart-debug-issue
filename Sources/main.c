@@ -29,9 +29,8 @@
 
 #include "mcg.h"
 #include "sdram.h"
-#include "uart.h"
-#include "uartdriver.h"
-#include "lcdc.h"
+//#include "uart.h"
+//#include "lcdc.h"
 #include "io.h"
 #include "lcdcConsole.h"
 
@@ -44,23 +43,17 @@ int main(void) {
    * (peripheral) clock is set to 60 MHz.*/
   mcgInit();
   sdramInit();
-  uart_init(0);
-  lcdc_init(0);
-  consoleDemo();
-  return 0;
-}
-
-void consoleDemo() {
+  unsigned uart_fd = myopen("/dev/uart/1", 0); 
+  unsigned lcdc_fd = myopen("/dev/lcdc/1", 0); 
+  //uart_init(0);
+  //lcdc_init(0);
   while(1) {
-	char ch = uart_read(0);
-    //char ch = uartGetchar(UART2_BASE_PTR); 
-
-	uart_write(ch, 0);
-    //uartPutchar(UART2_BASE_PTR, ch); 
-
-	lcdc_write(ch, 0);
+	char ch = myread(uart_fd);
+	mywrite(ch, uart_fd);
+	mywrite(ch, lcdc_fd);
 	if(ch == CHAR_EOF) {
-	  return;
+	  return 0;
 	}
   }
+  return 0;
 }
