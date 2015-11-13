@@ -41,6 +41,6 @@ int isdevice(int major_num);
 int isfile(int major_num); 
 void assert_memory_is_initialized(); 
 void verify_device_independent_file_operations(); 
-void init_fdtable(); 
+void init_devices_fdtable(); 
 void cat(unsigned fd); 
 #endif

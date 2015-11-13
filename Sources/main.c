@@ -29,28 +29,30 @@
 
 #include "mcg.h"
 #include "sdram.h"
-//#include "uart.h"
-//#include "lcdc.h"
 #include "io.h"
 #include "lcdcConsole.h"
+#include "common.h"
 
 #define CHAR_EOF 4
 
 void consoleDemo();
+extern unsigned mystdout; 
+extern unsigned mystdin; 
 
 int main(void) {
   /* After calling mcgInit, MCGOUTCLK is set to 120 MHz and the Bus
    * (peripheral) clock is set to 60 MHz.*/
   mcgInit();
   sdramInit();
-  unsigned uart_fd = myopen("/dev/uart/1", 0); 
-  unsigned lcdc_fd = myopen("/dev/lcdc/1", 0); 
-  //uart_init(0);
-  //lcdc_init(0);
+  init_devices_fdtable(); 
+  mystdin = myopen("/dev/uart/1", 0); 
+  mystdout = myopen("/dev/lcdc/1", 0); 
+  write_string("init on mystdin\r\n", mystdin); 
+  write_string("init on stdout\r\n", mystdout); 
   while(1) {
-	char ch = myread(uart_fd);
-	mywrite(ch, uart_fd);
-	mywrite(ch, lcdc_fd);
+	char ch = myread(mystdin);
+	mywrite(mystdin, ch);
+	mywrite(mystdout, ch);
 	if(ch == CHAR_EOF) {
 	  return 0;
 	}

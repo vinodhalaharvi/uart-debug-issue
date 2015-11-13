@@ -3,7 +3,7 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+!_TAG_PROGRAM_VERSION	5.8	//
 A1	derivative.h	/^  uint8_t A1;                                      \/**< I2C Address Register 1, offset: 0x0 *\/$/;"	m	struct:I2C_MemMap
 A2	derivative.h	/^  uint8_t A2;                                      \/**< I2C Address Register 2, offset: 0x9 *\/$/;"	m	struct:I2C_MemMap
 AC12ERR	derivative.h	/^  uint32_t AC12ERR;                                \/**< Auto CMD12 Error Status Register, offset: 0x3C *\/$/;"	m	struct:SDHC_MemMap
@@ -14490,7 +14490,6 @@ cat	io.c	/^void cat(unsigned fd){ $/;"	f
 close_fd	io.c	/^int close_fd(int fd){$/;"	f
 console	lcdcConsole.h	/^struct console {$/;"	s
 console	lcdcdriver.c	/^static struct console console; $/;"	v	typeref:struct:console	file:
-consoleDemo	main.c	/^void consoleDemo() {$/;"	f
 create_fd	io.c	/^int create_fd(int major_num, int minor_num){ $/;"	f
 data	mymalloc.h	/^    char * data[0]; $/;"	m	struct:_mymalloc_t
 defragment_memory	mymalloc.c	/^void defragment_memory(unsigned iterations){ $/;"	f
@@ -14539,7 +14538,6 @@ lcdc_minor_device	io.h	/^typedef enum {LCDC1} lcdc_minor_device; $/;"	t	typeref:
 lcdc_t	lcdc.h	/^} lcdc_t;$/;"	t	typeref:struct:_lcdcd_t
 lcdc_write	lcdc.c	/^int lcdc_write(int ch, void *minor_num){ $/;"	f
 lcdcs	lcdc.c	/^lcdc_t lcdcs[NUM_OF_LCDCS] = { $/;"	v
-main	io.c	/^int main()$/;"	f
 main	main.c	/^int main(void) {$/;"	f
 major_device	io.h	/^typedef enum {LCDC, UART} major_device; $/;"	t	typeref:enum:__anon35
 major_num	io.h	/^    int major_num; $/;"	m	struct:_fdtable_t

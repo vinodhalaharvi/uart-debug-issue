@@ -153,7 +153,6 @@ int myopen(const char * filepath, unsigned mode){
     minor_num = get_minor_num(filepath); 
     if (isdevice(major_num)){ 
         fd = get_fd(major_num, minor_num); 
-        myassert(fd != -1, "", "fd != -1"); 
         devices[major_num].init((void *) (uintptr_t) minor_num); 
         return fd; 
     } /*else { 
@@ -180,8 +179,6 @@ int myopen(const char * filepath, unsigned mode){
 int myclose(int fd){ 
     int major_num; 
     int minor_num; 
-    myassert(fd >= 0, "", "fd >= 0"); 
-    myassert(fd <= MAX_FILE_DESCRIPTORS, "", "fd <= MAX_FILE_DESCRIPTORS"); 
     major_num = fdtable[fd].major_num; 
     minor_num = fdtable[fd].minor_num; 
     if (devices[major_num].release){ 
@@ -193,9 +190,6 @@ int myclose(int fd){
 int mywrite(int fd, int ch){ 
     int major_num; 
     int minor_num; 
-    myassert(fd >= 0, "", "fd >= 0"); 
-    myassert(fd <= (MAX_FILE_DESCRIPTORS + PREDEFINED_DEVICE_MAP), 
-            "", "fd <= MAX_FILE_DESCRIPTORS + PREDEFINED_DEVICE_MAP"); 
     major_num = fdtable[fd].major_num; 
     minor_num = fdtable[fd].minor_num; 
     devices[major_num].write(ch, (void *) (uintptr_t) minor_num); 
@@ -206,8 +200,6 @@ int myread(int fd){
     int major_num; 
     int minor_num; 
     int ch; 
-    myassert(fd >= 0, "", "fd >= 0"); 
-    myassert(fd <= MAX_FILE_DESCRIPTORS, "", "fd <= MAX_FILE_DESCRIPTORS"); 
     major_num = fdtable[fd].major_num; 
     minor_num = fdtable[fd].minor_num; 
     ch = devices[major_num].read((void *) (uintptr_t) minor_num); 
