@@ -56,7 +56,7 @@ int main(void) {
 
 void consoleDemo() {
   while(1) {
-	char ch = uartGetchar(UART2_BASE_PTR);
+	char ch = uart_driver_read();
 
 	// Echo the input character back to the UART
 	uart_driver_write(ch);
