@@ -20,6 +20,5 @@ int lcdc_init(void * minor_num){
 
 int lcdc_write(int ch, void *minor_num){ 
     int fd = (int) (unsigned) minor_num; 
-    lcdcs[fd].write(ch); 
-    return 0; 
+    return lcdcs[fd].write(ch); 
 }

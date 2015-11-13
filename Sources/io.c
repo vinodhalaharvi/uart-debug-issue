@@ -54,7 +54,6 @@ void print_fdtable(){
                     fdtable[i].minor_num);
         }
     }
-    fprintf(stdout, "\n");
 }
 
 void init_fdtable(){ 
@@ -227,21 +226,14 @@ void verify_io(){
     print_fdtable(); 
     print_fdtable(); 
     unsigned fd = myopen("/dev/uart/1", 0); 
-    fprintf(stdout, "fd of %s is %d\n", "/dev/uart/1", fd);
     fd = myopen("/dev/lcdc/1", 0); 
-    fprintf(stdout, "fd of %s is %d\n", "/dev/lcdc/1", fd);
-    fprintf(stdout, "fd of %s (0, 0) is: %d\n", get_device_path(0, 0), get_fd(0, 0));
+    printf("fd of %s is %d\n", "/dev/lcdc/1", fd);
+    printf("fd of %s (0, 0) is: %d\n", get_device_path(0, 0), get_fd(0, 0));
     myclose(0); 
     myclose(1); 
     print_fdtable(); 
 }
 
-
-int main()
-{
-    verify_io(); 
-    return 0;
-}
 
 
 /*void verify_device_independent_file_operations(){ 

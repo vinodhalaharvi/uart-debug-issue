@@ -30,6 +30,7 @@
 #include "mcg.h"
 #include "sdram.h"
 #include "uart.h"
+#include "uartdriver.h"
 #include "lcdc.h"
 #include "io.h"
 #include "lcdcConsole.h"
@@ -52,7 +53,11 @@ int main(void) {
 void consoleDemo() {
   while(1) {
 	char ch = uart_read(0);
+    //char ch = uartGetchar(UART2_BASE_PTR); 
+
 	uart_write(ch, 0);
+    //uartPutchar(UART2_BASE_PTR, ch); 
+
 	lcdc_write(ch, 0);
 	if(ch == CHAR_EOF) {
 	  return;
