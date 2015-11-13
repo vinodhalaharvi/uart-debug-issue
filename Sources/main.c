@@ -30,7 +30,7 @@
 #include "mcg.h"
 #include "sdram.h"
 #include "uartdriver.h"
-#include "lcdc.h"
+#include "lcdcdriver.h"
 #include "lcdcConsole.h"
 
 #define CHAR_EOF 4
