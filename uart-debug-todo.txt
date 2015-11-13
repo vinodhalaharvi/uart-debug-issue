@@ -1,0 +1,8 @@
+get basic uart class code working
+add io.c with uart and lcdc code only
+you may need to add mymalloc.c and file.c files for this to work
+test io.c works well with uart an lcdc
+add write_string and make sure you can write strings to the console
+now add led and push button and make they work 
+add potentiometer and make it works
+add shell and write commands
